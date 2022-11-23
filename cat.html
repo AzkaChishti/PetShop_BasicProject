@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Cats</title>
+    <style>
+      .decorate {
+        font-family: "cerebri Sans", Arial, Helvetica, sans-serif;
+        background: linear-gradient(to top, #a64d79, #c27ba0, #d66ca3);
+        border-radius: 11px;
+        width: 60%;
+        padding: 40px;
+        margin: 40px auto;
+        box-shadow: #c27ba0;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      p {
+        text-align: center;
+        line-height: 2;
+        color: white;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      h2 {
+        color: white;
+        margin: 12px;
+        text-align: center;
+      }
+      a,
+      strong {
+        color: white;
+      }
+      button {
+        padding: 15px 20px;
+        color: white;
+        display: block;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 40px;
+        margin: 30px auto;
+        border: 1px solid #7c52ef;
+        background: #885df1;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: white;
+        color: #885df1;
+        cursor: pointer;
+      }
+      span {
+        color: #885df1;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="decorate">
+      <a href="index.html">
+        ⩤ Go To Home
+    </a>
+      <h1>Buy Cats</h1>
+      <strong>
+        <ul>
+          <li>
+            <a href="#pcat">
+              <strong>Persian Cats</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#scat">
+              <strong>Scottish Fold Cats</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#bcat">
+              <strong>British Shorthair</strong>
+            </a>
+          </li>
+        </ul>
+      </strong>
+      <a name="pcat">
+        <h2>Persian Cats</h2>
+        <img src="./images/White_Persian_Cat.jpg" width="300px" >
+        <p>
+          Persian longhair, is a long-haired breed of cat characterized by a
+          round face and short muzzle. The first documented ancestors of Persian
+          cats were imported into Italy from Persia around 1620.[1][2] Widely
+          recognized by cat fancy since the late 19th century, Persian cats were
+          first adopted by the British, and later by American breeders after
+          World War II.
+        </p>
+        <em>
+          Price is
+          <span>$ 800</span>
+        </em>
+        <button onclick="pBuy()" id="pcat">Buy</button>
+      </a>
+      <a name="scat">
+        <h2>Scottish Fold Cats</h2>
+        <img src="./images/Scottishfoldlindt.jpg" width="300px" >
+        <p>
+          The Scottish Fold is a breed of domestic cat with a natural dominant
+          gene mutation that affects cartilage throughout the body, causing the
+          ears to "fold", bending forward and down towards the front of the
+          head, which gives the cat what is often described as an "owl-like"
+          appearance.[1] Originally called lop-eared or lops after the lop-eared
+          rabbit, Scottish Fold became the breed's name in 1966.[1] Depending on
+          registries, longhaired Scottish Folds are varyingly known as Highland
+          Fold, Scottish Fold Longhair, Longhair Fold and Coupari.
+        </p>
+        <em>
+          Price is
+          <span>$ 900</span>
+        </em>
+        <button onclick="sBuy()" id="scat">Buy</button>
+      </a>
+      <a name="bcat">
+        <h2>British Shorthair</h2>
+        <img src="./images/British_Shorthair_Kitten.jpg" t width="300px" >
+        <p>
+          The British Shorthair is the pedigreed version of the traditional
+          British domestic cat, with a distinctively stocky body, dense coat,
+          and broad face. The most familiar colour variant is the "British
+          Blue", with a solid grey-blue coat, orange eyes, and a medium-sized
+          tail. The breed has also been developed in a wide range of other
+          colours and patterns, including tabby and colourpoint.
+        </p>
+        <em>
+          Price is
+          <span>$ 700</span>
+        </em>
+        <button onclick="bBuy()" id="bcat">Buy</button>
+      </a>
+    </div>
+    <script>
+      function pBuy() {
+        let name = prompt("What is your name?");
+        let intrest = prompt("Are you Animal lover?yes/no");
+        intrest = intrest.toLowerCase().trim();
+
+        if (intrest === "yes") {
+          alert(
+            " Hi " +
+              " " +
+              name +
+              " " +
+              "Thanks for shopping! Your bill is $ 800" +
+              "🫶🏻"
+          );
+        } else {
+          alert("Sorry!" + " " + name + " " + "you can not buy Animal");
+        }
+      }
+      let buyPcat = document.querySelector(".pcat");
+      buyPcat.addEventListener("click", pBuy);
+      function sBuy() {
+        let name = prompt("What is your name?");
+        let intrest = prompt("Are you Animal lover?yes/no");
+        intrest = intrest.toLowerCase().trim();
+
+        if (intrest === "yes") {
+          alert(
+            " Hi " +
+              " " +
+              name +
+              " " +
+              "Thanks for shopping! Your bill is $ 900" +
+              "🫶🏻"
+          );
+        } else {
+          alert("Sorry!" + " " + name + " " + "you can not buy Animal");
+        }
+      }
+      let buyScat = document.querySelector(".pcat");
+      buyScat.addEventListener("click", sBuy);
+      function bBuy() {
+        let name = prompt("What is your name?");
+        let intrest = prompt("Are you Animal lover?yes/no");
+        intrest = intrest.toLowerCase().trim();
+        if (intrest === "yes") {
+          alert(
+            " Hi " +
+              " " +
+              name +
+              " " +
+              "Thanks for shopping! Your bill is $ 700" +
+              "🫶🏻"
+          );
+        } else {
+          alert("Sorry!" + " " + name + " " + "you can not buy Animal");
+        }
+      }
+      let buyBcat = document.querySelector(".bcat");
+      buyBcat.addEventListener("click", bBuy);
+    </script>
+  </body>
+</html>

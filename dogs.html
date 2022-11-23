@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Dogs</title>
+    <style>
+      .decorate {
+        font-family: "cerebri Sans", Arial, Helvetica, sans-serif;
+        background: linear-gradient(to top, #a64d79, #c27ba0, #d66ca3);
+        border-radius: 11px;
+        width: 60%;
+        padding: 40px;
+        margin: 40px auto;
+        box-shadow: #c27ba0;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      p {
+        text-align: center;
+        line-height: 2;
+        color: white;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      h2 {
+        color: white;
+        margin: 12px;
+        text-align: center;
+      }
+      a,
+      strong {
+        color: white;
+      }
+      button {
+        padding: 15px 20px;
+        color: white;
+        display: block;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 40px;
+        margin: 30px auto;
+        border: 1px solid #7c52ef;
+        background: #885df1;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: white;
+        color: #885df1;
+        cursor: pointer;
+      }
+      span {
+        color: #885df1;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="decorate">
+      <a href="index.html">
+        ⩤ Go To Home
+    </a>
+      <h1>Buy Dogs</h1>
+      <strong>
+        <ul>
+          <li>
+            <a href="#sdog">
+              <strong>Sporting Group</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#hdog">
+              <strong>Hound Group</strong>
+            </a>
+          </li>
+          <li>
+            <a href="#tdog">
+              <strong>Toy Group</strong>
+            </a>
+          </li>
+        </ul>
+      </strong>
+      <a name="sdog">
+        <h2>Sporting Group</h2>
+        <img src="./images/SportingGroup.jpg" width="300px" >
+        <p>
+          Dogs in the Sporting Group were bred to be a hunter’s best sidekick; their purpose is to assist with finding, flushing, catching, or retrieving feathered game such as pheasants or ducks. Human hunters rely on these canines' help with retrieving upland game birds or waterfowl.
+        </p>
+        <em>
+          Price is
+          <span>$ 1000</span>
+        </em>
+        <button onclick="sdog()" id="sdog">Buy</button>
+      </a>
+      <a name="hdog">
+        <h2>Hound Group</h2>
+        <img src="./images/HoundGroup.jpg" width="300px" >
+        <p>
+          Originally, the Sporting Group also included hounds. However, in 1930, the American Kennel Club introduced the Hound Group to include dogs that have specifically been bred to pursue warm-blooded quarry, such as rabbits, raccoons, or even antelope, in contrast to sporting breeds, which generally are used to hunt birds.
+        </p>
+        <em>
+          Price is
+          <span>$ 9000</span>
+        </em>
+        <button onclick="hdog()" id="hdog">Buy</button>
+      </a>
+      <a name="tdog">
+        <h2>Toy Group</h2>
+        <img src="./images/toyGroup.jpg" t width="300px" >
+        <p>
+          While they might resemble adorable toys, the dogs in the Toy Group are just as much canine as their larger cousins in the other breed groups. Some of the most popular members of this large group include Chihuahuas, pugs, Maltese, Pomeranians, miniature pinschers, and Yorkshire terriers.
+        </p>
+        <em>
+          Price is
+          <span>$ 7000</span>
+        </em>
+        <button onclick="tdog()" id="tdog">Buy</button>
+      </a>
+    </div>
+    <script>
+      function sdog() {
+        let name = prompt("What is your name?");
+        let intrest = prompt("Are you Animal lover?yes/no");
+        intrest = intrest.toLowerCase().trim();
+
+        if (intrest === "yes") {
+          alert(
+            " Hi " +
+              " " +
+              name +
+              " " +
+              "Thanks for shopping! Your bill is $ 1000" +
+              "🫶🏻"
+          );
+        } else {
+          alert("Sorry!" + " " + name + " " + "you can not buy Animal");
+        }
+      }
+      let buysdog= document.querySelector(".sdog");
+      buysdog.addEventListener("click", sdog);
+      function hdog() {
+        let name = prompt("What is your name?");
+        let intrest = prompt("Are you Animal lover?yes/no");
+        intrest = intrest.toLowerCase().trim();
+
+        if (intrest === "yes") {
+          alert(
+            " Hi " +
+              " " +
+              name +
+              " " +
+              "Thanks for shopping! Your bill is $ 9000" +
+              "🫶🏻"
+          );
+        } else {
+          alert("Sorry!" + " " + name + " " + "you can not buy Animal");
+        }
+      }
+      let buyhdog = document.querySelector(".hdog");
+      buthdog.addEventListener("click", hdog);
+      function tdog() {
+        let name = prompt("What is your name?");
+        let intrest = prompt("Are you Animal lover?yes/no");
+        intrest = intrest.toLowerCase().trim();
+        if (intrest === "yes") {
+          alert(
+            " Hi " +
+              " " +
+              name +
+              " " +
+              "Thanks for shopping! Your bill is $ 7000" +
+              "🫶🏻"
+          );
+        } else {
+          alert("Sorry!" + " " + name + " " + "you can not buy Animal");
+        }
+      }
+      let buytdog = document.querySelector(".tdog");
+      buytdog.addEventListener("click", tdog);
+    </script>
+  </body>
+</html>
